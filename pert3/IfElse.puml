@@ -1,0 +1,20 @@
+@startuml ifelse
+
+start
+if(int a lebih besar dari) then (yes)
+    #LightSkyBlue:cout << a lebih besar dari b;
+else (no)
+    #LightSkyBlue:cout << b lebih besar dari a;
+endif
+stop
+
+header 
+Pertemuan 3
+endheader
+title Selection Statements Menggunakan If Else
+caption copyright@esaunggul.ac.id
+legend left
+    CTI211-Pemograman Berorientasi Objek 
+endlegend
+
+@enduml

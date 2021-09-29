@@ -1,0 +1,44 @@
+@startuml switchcase
+start
+switch (int hari = ?)
+case(kondisi 1)
+    #LightGreen:senin;
+    #LightGreen:cout << minggu;
+    stop
+case(kondisi 2)
+    #LightGreen:selasa;
+    #LightGreen:cout << minggu;
+    stop
+case(kondisi 3)
+    #LightGreen:rabu;
+    #LightGreen:cout << minggu;
+    stop
+case(kondisi 4)
+    #LightGreen:kamis;
+    #LightGreen:cout << minggu;
+    stop
+case(kondisi 5)
+    #LightGreen:jumat;
+    #LightGreen:cout << minggu;
+    stop
+case(kondisi 6)
+    #LightGreen:sabtu;
+    #LightGreen:cout << minggu;
+    stop
+case(kondisi 7)
+    #LightGreen:minggu;
+    #LightGreen:cout << minggu;
+    stop
+endswitch
+
+header 
+Pertemuan 3
+endheader
+title Selection Statements Menggunakan Switch Case
+caption copyright@esaunggul.ac.id
+legend left
+    CTI211-Pemograman Berorientasi Objek 
+endlegend
+
+@enduml
+
