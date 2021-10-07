@@ -23,5 +23,3 @@ int main(){
     cout<<"Berarti Usia Kalian sekarang adalah "<<obj.usia()<<" Tahun"<<endl;
     return 0;
 }
-
-https://prod.liveshare.vsengsaas.visualstudio.com/join?2F185530AADF4467254A9662684F537273EC
