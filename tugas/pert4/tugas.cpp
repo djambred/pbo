@@ -4,15 +4,15 @@ using namespace std;
 
 class umur{
     private:
-    int tahunlahir, tahunsekarang;
+    int a, b;
 
     public:
     void assign(int tahunlahir, int tahunsekarang){
-        tahunlahir=tahunlahir;
-        tahunsekarang=tahunsekarang;
+        a=tahunlahir;
+        b=tahunsekarang;
     }
     int usia(){
-        return tahunsekarang-tahunlahir;
+        return a-b;
     }
     
 };
