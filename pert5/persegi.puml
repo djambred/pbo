@@ -1,0 +1,23 @@
+@startuml persegiencap
+
+class Persegi{
+    __ private data __
+    - panjang : int
+    - lebar : int
+    __ public data__
+    - p : int
+    - l : int
+    __ get data__
+    + getPanjang()
+    + getLebar()
+    __ set data__
+    + setPanjang()
+    + setLebar()
+    __ callback__
+    ~ hitungKeliling()
+    ~ hitungLuas()
+    --
+    source code pert5-1.cc
+}
+
+@enduml

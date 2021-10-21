@@ -1,0 +1,14 @@
+@startuml encapsulation
+
+class Jam {
+    - Jam : int
+    - Menit : int
+    - Detik : int
+    + displayJam()
+    + tambahJam()
+    + tambahMenit()
+    + tambahDetik()
+    --
+    source code pert5-0.cc
+}
+@enduml
