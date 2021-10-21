@@ -19,5 +19,10 @@ class Persegi{
     --
     source code pert5-1.cc
 }
+note left of Persegi
+  Bentuk encapsulation dari Class Persegi
+  Dimana method dan variabel tergabung
+  Dan menjadi satu kesatuan dalam bentuk Class
+end note
 
 @enduml

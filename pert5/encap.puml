@@ -1,14 +1,28 @@
 @startuml encapsulation
 
 class Jam {
+    __ private data__
     - Jam : int
     - Menit : int
     - Detik : int
+    __ callback__
     + displayJam()
+    __ set data__
     + tambahJam()
     + tambahMenit()
     + tambahDetik()
     --
     source code pert5-0.cc
 }
+note left of Jam::Jam
+  Private Class
+end note
+
+note left of Jam::displayJam()
+  Callback Template
+end note
+
+note left of Jam::tambahJam()
+  Logic Template
+end note
 @enduml
