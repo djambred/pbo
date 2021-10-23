@@ -1,0 +1,44 @@
+@startuml polypmorphism
+
+header 
+Pertemuan 5
+endheader
+caption copyright@esaunggul.ac.id
+legend left
+    CTI211-Pemograman Berorientasi Objek 
+endlegend
+
+class Hitung {
+    __ public data__
+    + Luas : int
+    + HitungLuas()
+    --
+    source code pert5-2.cc
+}
+
+class Segitiga {
+    __ public data__
+    + lebar : int
+    + tinggi : int
+    __ private data__
+    - a : int
+    - b : int
+    --
+    source code pert5-2.cc
+}
+
+class Segiempat{
+    __ public data__
+    + lebar : int
+    + tinggi : int
+    __ private data__
+    - a : int
+    - b : int
+    --
+    source code pert5-2.cc
+}
+Hitung <|--- Segiempat
+Hitung <|--- Segitiga
+note top of Hitung : Misalkan kita punya 2 bidang yakni segitiga dan segiempat. Keduanya memiliki operasi hitung luas, tapi cara menghitung luas segitiga tentu beda dengan hitung luas segiempat.
+
+@enduml

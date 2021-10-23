@@ -25,4 +25,12 @@ end note
 note left of Jam::tambahJam()
   Logic Template
 end note
+
+header 
+Pertemuan 5
+endheader
+caption copyright@esaunggul.ac.id
+legend left
+    CTI211-Pemograman Berorientasi Objek 
+endlegend
 @enduml

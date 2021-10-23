@@ -1,4 +1,11 @@
 @startuml persegiencap
+header 
+Pertemuan 5
+endheader
+caption copyright@esaunggul.ac.id
+legend left
+    CTI211-Pemograman Berorientasi Objek 
+endlegend
 
 class Persegi{
     __ private data __

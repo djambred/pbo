@@ -1,0 +1,32 @@
+@startuml inheritance
+header 
+Pertemuan 5
+endheader
+caption copyright@esaunggul.ac.id
+legend left
+    CTI211-Pemograman Berorientasi Objek 
+endlegend
+
+class Kendaraan{
+    __ protected __
+    # merk : string
+    # jenis : string
+    --
+    source code pert5-3.cc
+}
+
+class Mobil{
+    __ public __
+    + kendaraan(): param
+    __ private __
+    - paramJenis : string
+    - paramMerk : string
+    --
+    source code pert5-3.cc
+}
+
+Kendaraan <|--- Mobil
+
+note top of Kendaraan : Inheritance adalah konsep OOP dimana sebuah class dapat menurunkan data member dan member function yang dimilikinya kepada class lain. Konsep inheritance dipakai untuk memanfaatkan fitur code reuse, yakni menghindari terjadinya duplikasi kode program.
+
+@enduml

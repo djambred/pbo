@@ -6,12 +6,7 @@ class Segitiga{
     private:
         int alas, tinggi;
     public:
-        int getAlas(){
-            return alas;
-        }
-        int getTinggi(){
-            return tinggi;
-        }
+
 
         void setAlas(int a){
             alas = a;
