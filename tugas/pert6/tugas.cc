@@ -21,7 +21,7 @@ Waktu::Waktu(int jam, int menit, int detik){
 }
 
 void Waktu::setWaktu(int j, int m, int d){
-    if ((j>=0 && j<24) && (m>=0 && m<=60) && (d>=0 && d<=60)){
+    if ((j>=0 && j<24) && (m>=0 && m<=59) && (d>=0 && d<=59)){
         jam = j;
         menit = m;
         detik = d;
