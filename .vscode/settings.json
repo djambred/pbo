@@ -2,5 +2,6 @@
     "files.associations": {
         "*.tcc": "cpp"
     },
+    "terminal.integrated.fontFamily": "MesloLGS NF",
     "editor.fontFamily": "MesloLGS NF, Consolas, 'Courier New', monospace"
 }
