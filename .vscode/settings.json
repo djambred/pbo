@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp"
+    },
+    "editor.fontFamily": "MesloLGS NF, Consolas, 'Courier New', monospace"
+}
