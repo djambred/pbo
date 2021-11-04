@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    int a[1], i;
+    int a[10], i;
     string b;
     float c;
     double d;

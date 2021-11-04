@@ -1,0 +1,15 @@
+@startuml memory
+
+Actor Programmer as user
+
+node Input as input
+node Memory as memory
+node SourceCode as coding
+
+user --> input : 1
+input --> coding : 2
+input --> memory : 2
+memory --> user : 3
+coding --> user : 3
+
+@enduml
