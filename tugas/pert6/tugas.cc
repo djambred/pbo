@@ -44,7 +44,7 @@ int Waktu::getDetik(){
 
 int main(){    
     Waktu t;
-    t.setWaktu(20,25,60);
+    t.setWaktu(20,25,50);
     cout <<endl<<t.getJam()<<":"<<t.getMenit()<<":"<<t.getDetik()<<endl;
     return 0;
 }
