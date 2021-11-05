@@ -1,0 +1,25 @@
+@startuml paradigma
+
+Actor user as user
+
+node Program as program
+
+node Model as Model
+node Controller as ctrl
+node View as vw
+
+
+database mysql as mysql
+
+
+user --> program
+program --> Model
+Model --> ctrl
+program --> ctrl
+program --> vw
+ctrl --> mysql
+mysql -->ctrl
+ctrl --> vw
+vw --> user
+
+@enduml
