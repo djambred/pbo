@@ -29,37 +29,30 @@ MYSQL* connectdb(){
 
 void createDatabase(MYSQL* conn){
     string db;
-    stringstream ss, sss, ssss;
+    stringstream createdb, dropdb, createulangdb;
     cout<<"input nama databasenya: \n";
     cin >> db;
-    ss << "CREATE DATABASE "+db+" ";
-    string query = ss.str();
+    createdb << "CREATE DATABASE "+db+" ";
+    string query = createdb.str();
     const char* q = query.c_str();
     int qstate = mysql_query(conn, q);
     if(qstate==0){
         cout<<"berhasil create db\n";
     }else if (qstate ==0)
     {
-        sss << "DROP DATABASE IF EXISTS "+db+" ";
-        string query = sss.str();
+        dropdb << "DROP DATABASE IF EXISTS "+db+" ";
+        string query = dropdb.str();
         const char* q = query.c_str();
         int qstate = mysql_query(conn, q);
         cout<<"berhasil drop\n";
     }else{
-        ssss << "CREATE DATABASE "+db+" ";
-        string query = ssss.str();
+        createulangdb << "CREATE DATABASE "+db+" ";
+        string query = createulangdb.str();
         const char* q = query.c_str();
         int qstate = mysql_query(conn, q);
         cout<<"create ulang database\n";
     }
     
-}
-
-void dropDatabase(MYSQL* conn){
-    string db;
-    stringstream ss;
-    cout<<"input nama tablenya: \n";
-
 }
 
 void insertData(MYSQL* conn){
@@ -102,7 +95,7 @@ void displayData(MYSQL* conn){
 
         }
     } else {
-        cout << "gagal" <<endl;
+        cout << "Data Kosong" <<endl;
     }
 }
 
@@ -112,9 +105,9 @@ void updateData(MYSQL* conn){
     string id;
     cout << "enter id : "<<endl;
     cin >> id;
-    stringstream ss, sss;
-    sss << "SELECT * FROM mahasiswa WHERE id = '"+id+"' ";
-    string query = sss.str();
+    stringstream selectdb, updatedb;
+    selectdb << "SELECT * FROM mahasiswa WHERE id = '"+id+"' ";
+    string query = selectdb.str();
     const char* q = query.c_str();
     mysql_query(conn, q);
     res = mysql_store_result(conn);
@@ -122,13 +115,12 @@ void updateData(MYSQL* conn){
     my_ulonglong x = mysql_num_rows(res);
     string nim, nama;
     if(x>0){
-        //ss <<"DELETE FROM mahasiswa WHERE id = '"+id+"' ";
         cout << "insert NIM : "<<endl;
         cin>>nim;
         cout << "insert Nama : "<<endl;
         cin>>nama;
-        ss <<"UPDATE mahasiswa SET nim = '"+nim+"', nama= '"+nama+"' WHERE id = '"+id+"' ";
-        string query = ss.str();
+        updatedb <<"UPDATE mahasiswa SET nim = '"+nim+"', nama= '"+nama+"' WHERE id = '"+id+"' ";
+        string query = updatedb.str();
         const char* q = query.c_str();
         mysql_query(conn, q);
     }else{
@@ -145,9 +137,9 @@ void deleteData(MYSQL* conn){
     string id;
     cout << "enter id : "<<endl;
     cin >> id;
-    stringstream ss, sss;
-    sss << "SELECT * FROM mahasiswa WHERE id = '"+id+"' ";
-    string query = sss.str();
+    stringstream selectdb, deletedb;
+    selectdb << "SELECT * FROM mahasiswa WHERE id = '"+id+"' ";
+    string query = selectdb.str();
     const char* q = query.c_str();
     mysql_query(conn, q);
     res = mysql_store_result(conn);
@@ -155,8 +147,8 @@ void deleteData(MYSQL* conn){
     my_ulonglong x = mysql_num_rows(res);
 
     if(x>0){
-        ss <<"DELETE FROM mahasiswa WHERE id = '"+id+"' ";
-        string query = ss.str();
+        deletedb <<"DELETE FROM mahasiswa WHERE id = '"+id+"' ";
+        string query = deletedb.str();
         const char* q = query.c_str();
         mysql_query(conn, q);
     }else{
