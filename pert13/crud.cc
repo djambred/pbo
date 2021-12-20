@@ -4,7 +4,8 @@
 
 using namespace std;
 
-
+int pilih;
+char kembali;
 const char* hostname = "192.168.45.140";
 const char* user = "root";
 const char* pass = "p455w0rd";
@@ -26,33 +27,33 @@ MYSQL* connectdb(){
     }
 }
 
-// void createDatabase(MYSQL* conn){
-//     string db;
-//     stringstream ss, sss, ssss;
-//     cout<<"input nama databasenya: \n";
-//     cin >> db;
-//     ss << "CREATE DATABASE "+db+" ";
-//     string query = ss.str();
-//     const char* q = query.c_str();
-//     int qstate = mysql_query(conn, q);
-//     if(qstate==0){
-//         cout<<"berhasil create db\n";
-//     }else if (qstate ==0)
-//     {
-//         sss << "DROP DATABASE IF EXISTS "+db+" ";
-//         string query = sss.str();
-//         const char* q = query.c_str();
-//         int qstate = mysql_query(conn, q);
-//         cout<<"berhasil drop\n";
-//     }else{
-//         ssss << "CREATE DATABASE "+db+" ";
-//         string query = ssss.str();
-//         const char* q = query.c_str();
-//         int qstate = mysql_query(conn, q);
-//         cout<<"create ulang database\n";
-//     }
+void createDatabase(MYSQL* conn){
+    string db;
+    stringstream ss, sss, ssss;
+    cout<<"input nama databasenya: \n";
+    cin >> db;
+    ss << "CREATE DATABASE "+db+" ";
+    string query = ss.str();
+    const char* q = query.c_str();
+    int qstate = mysql_query(conn, q);
+    if(qstate==0){
+        cout<<"berhasil create db\n";
+    }else if (qstate ==0)
+    {
+        sss << "DROP DATABASE IF EXISTS "+db+" ";
+        string query = sss.str();
+        const char* q = query.c_str();
+        int qstate = mysql_query(conn, q);
+        cout<<"berhasil drop\n";
+    }else{
+        ssss << "CREATE DATABASE "+db+" ";
+        string query = ssss.str();
+        const char* q = query.c_str();
+        int qstate = mysql_query(conn, q);
+        cout<<"create ulang database\n";
+    }
     
-// }
+}
 
 void dropDatabase(MYSQL* conn){
     string db;
@@ -166,11 +167,49 @@ void deleteData(MYSQL* conn){
 
 int main(){
     MYSQL* conn = connectdb();
-    //createDatabase(conn);
-    insertData(conn);
-    //displayData(conn);
-    //deleteData(conn);
-    //updateData(conn);
-    displayData(conn);
+    do{
+        cout<<"MENU";
+        cout<<"\n 0. Exit";
+        cout<<"\n 1. Create ";
+        cout<<"\n 2. Read ";
+        cout<<"\n 3. Update ";
+        cout<<"\n 4. Delete ";
+        cout<<"\n 5. Create Database ";
+        
+        cout<<"\nPilih : "; cin>>pilih;
+
+        switch(pilih){
+            case 0:
+                cout<<"\nThanks"<<endl;
+                return 0;
+            case 1:
+				insertData(conn);
+                displayData(conn);
+                break;
+            case 2:
+				displayData(conn);
+                break;
+            case 3:
+                updateData(conn);
+                displayData(conn);
+                break;
+            case 4:
+                deleteData(conn);
+                displayData(conn);
+                break;
+            case 5:
+                createDatabase(conn);
+                break;
+            default:
+                cout<<"Pilihan Salah"<<endl;
+                break;
+            }
+            cout<<"Ingin memilih menu lain (y/t)? ";
+            cin>>kembali;
+            cout<<endl;
+        }
+        while (kembali!= 't');
+        cout<<"Thanks"<<endl;
     return 0;
+
 }
