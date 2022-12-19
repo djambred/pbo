@@ -29,7 +29,7 @@ public:
         int inp = 0;
         do
         {
-            cout << "Masukkan: \n 0. untuk memberi air\n 1. untuk memberi pupuk\n 999. untuk keluar" << endl;
+            cout << "Masukkan: \n 0. untuk memberi air\n 1. untuk memberi pupuk\n 9. untuk keluar" << endl;
             cout << "Angrek membutuhkan 4 air dan 2 pupuk" << endl;
             cout << "Pilihan : ";
             cin >> inp;
@@ -44,7 +44,7 @@ public:
             }
             displayPlant();
             cout << endl;
-        } while (inp != 999);
+        } while (inp != 9);
     }
 };
 
@@ -75,7 +75,7 @@ public:
         int inp = 0;
         do
         {
-            cout << "Masukkan: \n 0. untuk memberi air\n 1. untuk memberi pupuk\n 999. untuk keluar" << endl;
+            cout << "Masukkan: \n 0. untuk memberi air\n 1. untuk memberi pupuk\n 9. untuk keluar" << endl;
             cout << "Melati membutuhkan 2 air dan 3 pupuk" << endl;
             cout << "Pilihan : ";
             cin >> inp;
@@ -90,7 +90,7 @@ public:
             }
             displayPlant();
             cout << endl;
-        } while (inp != 999);
+        } while (inp != 9);
     }
 };
 
@@ -121,7 +121,7 @@ public:
         int inp = 0;
         do
         {
-            cout << "Masukkan: \n 0. untuk memberi air\n 1. untuk memberi pupuk\n 999. untuk keluar" << endl;
+            cout << "Masukkan: \n 0. untuk memberi air\n 1. untuk memberi pupuk\n 9. untuk keluar" << endl;
             cout << "Mawar membutuhkan 3 air dan 4 pupuk" << endl;
             cout << "Pilihan : ";
             cin >> inp;
@@ -136,7 +136,7 @@ public:
             }
             displayPlant();
             cout << endl;
-        } while (inp != 999);
+        } while (inp != 9);
     }
 };
 
