@@ -6,10 +6,10 @@ using namespace std;
 
 int pilih;
 char kembali;
-const char* hostname = "192.168.45.140";
+const char* hostname = "192.168.44.71";
 const char* user = "root";
 const char* pass = "p455w0rd";
-const char* dbname = "go_echo";
+const char* dbname = "bp";
 unsigned int port = 23306;
 const char* unixsocket = NULL;
 unsigned long clientflag = 0;
@@ -162,11 +162,12 @@ int main(){
     do{
         cout<<"MENU";
         cout<<"\n 0. Exit";
-        cout<<"\n 1. Create ";
-        cout<<"\n 2. Read ";
-        cout<<"\n 3. Update ";
-        cout<<"\n 4. Delete ";
-        cout<<"\n 5. Create Database ";
+        cout<<"\n 1. Create Data Mahasiswa ";
+        cout<<"\n 2. Read Data Mahasiswa dan Mata Kuliah ";
+        cout<<"\n 3. Update Data Mahasiswa ";
+        cout<<"\n 3. Update Data Mata Kuliah ";
+        cout<<"\n 4. Delete Data Mahasiswa ";
+        cout<<"\n 5. Delete Data Mata Kuliah ";
         
         cout<<"\nPilih : "; cin>>pilih;
 
