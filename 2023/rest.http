@@ -1,0 +1,23 @@
+@baseUrlUsers = http://127.0.0.1/api/users
+@cType = application/x-www-form-urlencoded
+
+###
+GET {{baseUrlUsers}}
+
+###
+POST {{baseUrlUsers}}
+Content-Type: {{cType}}
+
+username=djambred&password=:qwerty
+
+###
+GET {{baseUrlUsers}}/3
+
+###
+PUT {{baseUrlUsers}}/3
+Content-Type: {{cType}}
+
+username=djambred&password=tes
+
+###
+DELETE {{baseUrlUsers}}/1
