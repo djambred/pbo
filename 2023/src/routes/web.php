@@ -25,3 +25,10 @@ $router->group(['prefix' => 'api/users'], function() use ($router){
     $router->get('/{id}', ['uses' => 'UserController@show']);
     $router->delete('/{id}', ['uses' => 'UserController@destroy']);
 });
+$router->group(['prefix' => 'api/profile'], function() use($router){
+    $router->get('/', ['uses' => 'ProfileController@index']);
+    $router->post('/', ['uses' => 'ProfileController@create']);
+    $router->get('/{id}', ['uses' => 'ProfileController@show']);
+    $router->delete('/{id}', ['uses' => 'ProfileController@destroy']);
+    $router->put('/{id}', ['uses' => 'ProfileController@update']);
+});

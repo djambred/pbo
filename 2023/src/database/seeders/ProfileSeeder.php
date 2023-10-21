@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Profile;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class ProfileSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //$this->call('UserSeeder');
-        $this->call([
-            UserSeeder::class,
-            ProfileSeeder::class,
-        ]);
+        //
+        $profiles = [
+            'id' => 1,
+            'company_name' => 'ueu',
+            'address' => 'jalan terus'
+        ];
+
+        Profile::insert($profiles);
     }
 }
